@@ -10,5 +10,7 @@ jobs:
               run: echo "Welcome Dipanshu"
             - name: List File
               run: ls
+            - name: Read File
+              run: cat README.md
         
         
