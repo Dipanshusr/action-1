@@ -1,0 +1,12 @@
+name: My_First_Name
+on: push
+jobs:
+    first_jobs:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Welcome message
+              run: echo "Welcome Dipanshu"
+            - name: List File
+              run: ls
+        
+        
