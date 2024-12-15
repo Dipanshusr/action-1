@@ -8,9 +8,23 @@ jobs:
               uses: actions/checkout@v4
             - name: Welcome message
               run: echo "Welcome Dipanshu"
-            - name: List File
-              run: ls
-            - name: Read File
-              run: cat README.md
+            - name: Create File
+              run: echo "File created by first_job" > first_job.txt
+            - name: Upload Artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: f1
+                path: first_job.txt
+    second_jobs:
+        needs: first_jobs
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download Artifact
+              uses: actions/download-artifact@v4
+              with:
+                name: f1
+            - name: Read file
+              run: echo first_job.txt
+              
         
         
