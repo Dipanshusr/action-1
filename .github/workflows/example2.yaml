@@ -1,0 +1,12 @@
+name: Workflow2
+on: push
+jobs:
+    first_jobs:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo Message
+              run: echo "Hello World"
+            - name: List File
+              run: ls -latr
+            - name: Linux Version
+              run: cat /etc/*release/
