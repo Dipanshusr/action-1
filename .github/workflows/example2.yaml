@@ -9,4 +9,4 @@ jobs:
             - name: List File
               run: ls -latr
             - name: Linux Version
-              run: cat /etc/*release/
+              run: cat /etc/*release*/
